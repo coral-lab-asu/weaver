@@ -2,7 +2,7 @@
   "name": "weaver-website",
   "version": "1.0.0",
   "description": "Weaver: Interweaving SQL and LLM for Table Reasoning - Research Paper Website",
-  "homepage": "https://rohitkhoja.github.io/weaver-qa",
+  "homepage": "https://rohitkhoja.github.io/weaver",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^6.1.4",
