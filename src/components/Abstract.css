@@ -1,0 +1,245 @@
+.abstract-section {
+  background: var(--secondary-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.abstract-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--blue-accent), var(--cyan-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--secondary-text);
+  font-weight: 400;
+}
+
+.abstract-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.abstract-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.abstract-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--secondary-text);
+  text-align: justify;
+}
+
+.abstract-text strong {
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+.abstract-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  transition: all var(--transition-normal);
+}
+
+.highlight-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.highlight-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.sql-highlight {
+  background: linear-gradient(135deg, var(--blue-accent), var(--cyan-accent));
+}
+
+.llm-highlight {
+  background: linear-gradient(135deg, var(--purple-accent), var(--blue-accent));
+}
+
+.highlight-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
+}
+
+.highlight-content p {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  line-height: 1.5;
+}
+
+.key-contributions {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+.contributions-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contributions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contribution-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.contribution-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-accent), var(--cyan-accent));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.contribution-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 0.75rem;
+}
+
+.contribution-content p {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+
+.abstract-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.abstract-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.external-icon {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .abstract-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .abstract-highlights {
+    order: -1;
+  }
+
+  .contributions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .abstract-text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .key-contributions {
+    padding: 1.5rem;
+  }
+
+  .contribution-item {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .contribution-number {
+    align-self: center;
+  }
+
+  .abstract-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .abstract-actions .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}

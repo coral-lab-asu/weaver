@@ -1,0 +1,352 @@
+.citation-section {
+  background: var(--primary-bg);
+}
+
+.citation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.citation-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.citation-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border-left: 4px solid var(--blue-accent);
+}
+
+.citation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.citation-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
+}
+
+.citation-info p {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  line-height: 1.5;
+}
+
+.copy-citation-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--blue-accent);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.copy-citation-btn:hover {
+  background: var(--highlight-text);
+  transform: translateY(-1px);
+}
+
+.citation-code {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.paper-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  transition: all var(--transition-normal);
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  color: var(--blue-accent);
+  flex-shrink: 0;
+}
+
+.info-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 0.25rem;
+}
+
+.info-item p {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+}
+
+.authors-section,
+.acknowledgments-section,
+.funding-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+.authors-section h3,
+.acknowledgments-section h3,
+.funding-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.author-card {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+  text-align: center;
+}
+
+.author-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.author-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
+}
+
+.author-affiliation {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  margin-bottom: 0.5rem;
+}
+
+.author-role {
+  font-size: 0.8rem;
+  color: var(--accent-text);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.author-contact {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.author-email {
+  font-size: 0.85rem;
+  color: var(--blue-accent);
+  text-decoration: none;
+  font-family: var(--font-family-mono);
+  transition: color var(--transition-fast);
+}
+
+.author-email:hover {
+  color: var(--highlight-text);
+}
+
+.acknowledgments-intro {
+  font-size: 1rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.acknowledgments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.acknowledgment-card {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.acknowledgment-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.acknowledgment-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 0.75rem;
+}
+
+.ack-description {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.ack-contribution {
+  font-size: 0.85rem;
+  color: var(--accent-text);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.funding-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.funding-item {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.funding-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 0.75rem;
+}
+
+.funding-item p {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+
+.institutions {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.institutions h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 0.75rem;
+}
+
+.institutions p {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .citation-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .paper-info {
+    order: -1;
+  }
+
+  .authors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .acknowledgments-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .citation-content {
+    gap: 2rem;
+  }
+
+  .authors-section,
+  .acknowledgments-section,
+  .funding-section,
+  .citation-card {
+    padding: 1.5rem;
+  }
+
+  .citation-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .copy-citation-btn {
+    align-self: center;
+  }
+
+  .authors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .acknowledgments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .author-card {
+    padding: 1.25rem;
+  }
+
+  .funding-info {
+    gap: 1rem;
+  }
+}
