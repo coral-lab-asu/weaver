@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/weaver-qa/static/css/main.316c21c7.css",
+    "main.js": "/weaver-qa/static/js/main.e83f0a33.js",
+    "index.html": "/weaver-qa/index.html",
+    "main.316c21c7.css.map": "/weaver-qa/static/css/main.316c21c7.css.map",
+    "main.e83f0a33.js.map": "/weaver-qa/static/js/main.e83f0a33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.316c21c7.css",
+    "static/js/main.e83f0a33.js"
+  ]
+}
