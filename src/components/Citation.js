@@ -198,23 +198,23 @@ const Citation = () => {
             </div>
           </motion.div>
 
-          // <motion.div className="acknowledgments-section" variants={itemVariants}>
-          //   <h3>Acknowledgments</h3>
-          //   <p className="acknowledgments-intro">
-          //     This work was inspired by and builds upon several important contributions in the field:
-          //   </p>
-          //   <div className="acknowledgments-grid">
-          //     {acknowledgments.map((ack, index) => (
-          //       <div key={index} className="acknowledgment-card">
-          //         <h4>{ack.title}</h4>
-          //         <p className="ack-description">{ack.description}</p>
-          //         <p className="ack-contribution">{ack.contribution}</p>
-          //       </div>
-          //     ))}
-          //   </div>
-          // </motion.div>
+          {/* <motion.div className="acknowledgments-section" variants={itemVariants}>
+            <h3>Acknowledgments</h3>
+            <p className="acknowledgments-intro">
+              This work was inspired by and builds upon several important contributions in the field:
+            </p>
+            <div className="acknowledgments-grid">
+              {acknowledgments.map((ack, index) => (
+                <div key={index} className="acknowledgment-card">
+                  <h4>{ack.title}</h4>
+                  <p className="ack-description">{ack.description}</p>
+                  <p className="ack-contribution">{ack.contribution}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
-          {/* <motion.div className="funding-section" variants={itemVariants}>
+           <motion.div className="funding-section" variants={itemVariants}>
             <h3>Funding & Support</h3>
             <div className="funding-info">
               <div className="funding-item">
