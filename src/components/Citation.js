@@ -35,14 +35,11 @@ const Citation = () => {
     }
   };
 
-  const bibtexCitation = `@misc{khoja2025weaverinterweavingsqlllm,
-      title={Weaver: Interweaving SQL and LLM for Table Reasoning}, 
-      author={Rohit Khoja and Devanshu Gupta and Yanjie Fu and Dan Roth and Vivek Gupta},
-      year={2025},
-      eprint={2505.18961},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2505.18961}, 
+  const bibtexCitation = `@article{khoja2025weaver,
+  title={Weaver: Interweaving SQL and LLM for Table Reasoning},
+  author={Khoja, Rohit and Gupta, Devanshu and Fu, Yanjie and Roth, Dan and Gupta, Vivek},
+  journal={arXiv preprint arXiv:2505.18961},
+  year={2025}
 }`;
 
   const copyToClipboard = () => {
@@ -201,21 +198,21 @@ const Citation = () => {
             </div>
           </motion.div>
 
-          <motion.div className="acknowledgments-section" variants={itemVariants}>
-            <h3>Acknowledgments</h3>
-            <p className="acknowledgments-intro">
-              This work was inspired by and builds upon several important contributions in the field:
-            </p>
-            <div className="acknowledgments-grid">
-              {acknowledgments.map((ack, index) => (
-                <div key={index} className="acknowledgment-card">
-                  <h4>{ack.title}</h4>
-                  <p className="ack-description">{ack.description}</p>
-                  <p className="ack-contribution">{ack.contribution}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+          // <motion.div className="acknowledgments-section" variants={itemVariants}>
+          //   <h3>Acknowledgments</h3>
+          //   <p className="acknowledgments-intro">
+          //     This work was inspired by and builds upon several important contributions in the field:
+          //   </p>
+          //   <div className="acknowledgments-grid">
+          //     {acknowledgments.map((ack, index) => (
+          //       <div key={index} className="acknowledgment-card">
+          //         <h4>{ack.title}</h4>
+          //         <p className="ack-description">{ack.description}</p>
+          //         <p className="ack-contribution">{ack.contribution}</p>
+          //       </div>
+          //     ))}
+          //   </div>
+          // </motion.div>
 
           {/* <motion.div className="funding-section" variants={itemVariants}>
             <h3>Funding & Support</h3>
