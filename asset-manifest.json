@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/weaver/static/css/main.316c21c7.css",
-    "main.js": "/weaver/static/js/main.cc815e77.js",
+    "main.css": "/weaver/static/css/main.d183a2c4.css",
+    "main.js": "/weaver/static/js/main.52b88b4e.js",
     "index.html": "/weaver/index.html",
-    "main.316c21c7.css.map": "/weaver/static/css/main.316c21c7.css.map",
-    "main.cc815e77.js.map": "/weaver/static/js/main.cc815e77.js.map"
+    "main.d183a2c4.css.map": "/weaver/static/css/main.d183a2c4.css.map",
+    "main.52b88b4e.js.map": "/weaver/static/js/main.52b88b4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.316c21c7.css",
-    "static/js/main.cc815e77.js"
+    "static/css/main.d183a2c4.css",
+    "static/js/main.52b88b4e.js"
   ]
 }
