@@ -137,6 +137,55 @@
   font-weight: 600;
 }
 
+.model-selector {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.model-selector h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+}
+
+.model-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+  margin: 0 auto;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.model-tab {
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--secondary-text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.model-tab:hover {
+  color: var(--primary-text);
+  background: var(--accent-bg);
+}
+
+.model-tab.active {
+  background: linear-gradient(135deg, var(--purple-accent), var(--blue-accent));
+  color: white;
+  font-weight: 600;
+}
+
 .results-visualization {
   display: grid;
   grid-template-columns: 1fr 2fr;

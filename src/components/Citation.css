@@ -9,10 +9,10 @@
 }
 
 .citation-main {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .citation-card {
@@ -288,15 +288,6 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .citation-main {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .paper-info {
-    order: -1;
-  }
-
   .authors-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }

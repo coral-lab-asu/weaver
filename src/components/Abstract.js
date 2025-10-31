@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiFileText, FiExternalLink, FiDatabase, FiCpu } from 'react-icons/fi';
+import { FiDatabase, FiCpu } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Abstract.css';
@@ -132,29 +132,6 @@ const Abstract = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-
-          <motion.div className="abstract-actions" variants={itemVariants}>
-            <a
-              href="https://arxiv.org/abs/2505.18961"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              <FiFileText />
-              Read Full Paper
-              <FiExternalLink className="external-icon" />
-            </a>
-            <a
-              href="https://arxiv.org/pdf/2505.18961.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary"
-            >
-              <FiFileText />
-              Download PDF
-              <FiExternalLink className="external-icon" />
-            </a>
           </motion.div>
         </motion.div>
       </div>

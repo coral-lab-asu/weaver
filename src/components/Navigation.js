@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiMenu, FiX, FiGithub, FiFileText, FiExternalLink } from 'react-icons/fi';
+import { FiMenu, FiX, FiGithub, FiFileText, FiExternalLink, FiImage, FiSliders } from 'react-icons/fi';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -18,7 +18,6 @@ const Navigation = () => {
     { label: 'Abstract', href: '#abstract' },
     { label: 'Architecture', href: '#architecture' },
     { label: 'Demo', href: '#demo' },
-    { label: 'Installation', href: '#installation' },
     { label: 'Results', href: '#results' },
     { label: 'Citation', href: '#citation' }
   ];
@@ -64,6 +63,24 @@ const Navigation = () => {
             Paper
           </a>
           <a
+            href={`${process.env.PUBLIC_URL || ''}/poster.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary nav-btn"
+          >
+            <FiImage />
+            Poster
+          </a>
+          <a
+            href={`${process.env.PUBLIC_URL || ''}/presentation.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary nav-btn"
+          >
+            <FiSliders />
+            Slides
+          </a>
+          <a
             href="https://github.com/rohitkhoja/weaver"
             target="_blank"
             rel="noopener noreferrer"
@@ -105,6 +122,26 @@ const Navigation = () => {
               >
                 <FiFileText />
                 Paper
+                <FiExternalLink className="external-icon" />
+              </a>
+              <a
+                href={`${process.env.PUBLIC_URL || ''}/poster.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                <FiImage />
+                Poster
+                <FiExternalLink className="external-icon" />
+              </a>
+              <a
+                href={`${process.env.PUBLIC_URL || ''}/presentation.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                <FiSliders />
+                Slides
                 <FiExternalLink className="external-icon" />
               </a>
               <a

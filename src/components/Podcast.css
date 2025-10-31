@@ -1,0 +1,125 @@
+.podcast-section {
+  background: var(--primary-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.podcast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.podcast-player-wrapper {
+  width: 100%;
+  max-width: 700px;
+}
+
+.podcast-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.podcast-header-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.podcast-icon {
+  font-size: 2.5rem;
+  color: var(--blue-accent);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.podcast-header-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
+}
+
+.podcast-header-info p {
+  font-size: 1rem;
+  color: var(--secondary-text);
+  line-height: 1.5;
+}
+
+.audio-container {
+  margin-bottom: 1.5rem;
+}
+
+.audio-player {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background: var(--tertiary-bg);
+}
+
+.audio-player::-webkit-media-controls-panel {
+  background-color: var(--tertiary-bg);
+}
+
+.audio-player::-webkit-media-controls-play-button {
+  background-color: var(--blue-accent);
+  border-radius: 50%;
+}
+
+.audio-player::-webkit-media-controls-current-time-display,
+.audio-player::-webkit-media-controls-time-remaining-display {
+  color: var(--primary-text);
+  font-family: var(--font-family-mono);
+}
+
+.podcast-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--primary-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  width: 100%;
+  justify-content: center;
+}
+
+.podcast-download-link:hover {
+  background: var(--accent-bg);
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .podcast-card {
+    padding: 1.5rem;
+  }
+
+  .podcast-header-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .podcast-icon {
+    align-self: center;
+  }
+
+  .podcast-header-info h3 {
+    font-size: 1.25rem;
+  }
+}
+

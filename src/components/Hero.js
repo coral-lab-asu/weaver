@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiGithub, FiFileText, FiPlay, FiAward } from 'react-icons/fi';
+import { FiGithub, FiFileText, FiPlay, FiAward, FiImage, FiSliders } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import './Hero.css';
 
@@ -106,6 +106,24 @@ const Hero = () => {
             >
               <FiFileText />
               Read Paper
+            </a>
+            <a
+              href={`${process.env.PUBLIC_URL || ''}/poster.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary hero-btn"
+            >
+              <FiImage />
+              Poster
+            </a>
+            <a
+              href={`${process.env.PUBLIC_URL || ''}/presentation.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary hero-btn"
+            >
+              <FiSliders />
+              Slides
             </a>
             <a
               href="https://github.com/rohitkhoja/weaver"

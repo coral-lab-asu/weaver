@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiCopy, FiCheck, FiFileText, FiUsers, FiAward } from 'react-icons/fi';
+import { FiCopy, FiCheck } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -47,29 +47,6 @@ const Citation = () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
-  const acknowledgments = [
-    {
-      title: 'BlendSQL',
-      description: 'A Scalable Dialect for Unifying Hybrid Question Answering in Relational Algebra',
-      contribution: 'Foundational work on SQL-LLM integration'
-    },
-    {
-      title: 'ProTrix',
-      description: 'Building Models for Planning and Reasoning over Tables with Sentence Context',
-      contribution: 'Planning-based approach inspiration'
-    },
-    {
-      title: 'H-Star',
-      description: 'LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables',
-      contribution: 'Hybrid reasoning methodology'
-    },
-    {
-      title: 'Binder',
-      description: 'Binding Language Models in Symbolic Languages',
-      contribution: 'SQL-LLM binding concepts'
-    }
-  ];
 
   const authors = [
     {
@@ -150,30 +127,6 @@ const Citation = () => {
                 >
                   {bibtexCitation}
                 </SyntaxHighlighter>
-              </div>
-            </div>
-
-            <div className="paper-info">
-              <div className="info-item">
-                <FiAward className="info-icon" />
-                <div>
-                  <h4>Conference</h4>
-                  <p>EMNLP 2025 (Accepted)</p>
-                </div>
-              </div>
-              <div className="info-item">
-                <FiFileText className="info-icon" />
-                <div>
-                  <h4>ArXiv ID</h4>
-                  <p>2505.18961</p>
-                </div>
-              </div>
-              <div className="info-item">
-                <FiUsers className="info-icon" />
-                <div>
-                  <h4>Authors</h4>
-                  <p>5 researchers from ASU & UPenn</p>
-                </div>
               </div>
             </div>
           </motion.div>

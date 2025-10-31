@@ -6,6 +6,7 @@ import './Results.css';
 
 const Results = () => {
   const [activeDataset, setActiveDataset] = useState('wikitq');
+  const [activeModel, setActiveModel] = useState('gpt4mini');
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -74,53 +75,196 @@ const Results = () => {
 
   const resultsData = {
     wikitq: {
-      name: 'WikiTableQuestions',
+      name: 'WikiTQ',
+      fullName: 'WikiTQ',
       description: 'Complex reasoning over Wikipedia tables',
-      bestAccuracy: '73.0%',
-      model: 'DeepSeek-R1-Distill-Llama-70B',
-      results: [
-        { method: 'End-to-End QA', accuracy: '76.4', model: 'DeepSeek' },
-        { method: 'Binder', accuracy: '26.4', model: 'DeepSeek' },
-        { method: 'BlendSQL', accuracy: '32.2', model: 'DeepSeek' },
-        { method: 'ReAcTable', accuracy: '52.2', model: 'DeepSeek' },
-        { method: 'H-STAR', accuracy: '68.7', model: 'DeepSeek' },
-        { method: 'ProTrix', accuracy: '41.4', model: 'DeepSeek' },
-        { method: 'Weaver (Ours)', accuracy: '73.0', model: 'DeepSeek', isOurs: true }
-      ]
+      models: {
+        gpt4mini: {
+          name: 'GPT-4o-mini',
+          shortName: 'GPT-4o-mini',
+          bestAccuracy: '65.0%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '60.4' },
+            { method: 'Binder', accuracy: '24.0' },
+            { method: 'BlendSQL', accuracy: '26.0' },
+            { method: 'ReAcTable', accuracy: '29.9' },
+            { method: 'H-STAR', accuracy: '59.0' },
+            { method: 'ProTrix', accuracy: '61.4' },
+            { method: 'Weaver (Ours)', accuracy: '65.0', isOurs: true }
+          ]
+        },
+        gpt4: {
+          name: 'GPT-4o',
+          shortName: 'GPT-4o',
+          bestAccuracy: '70.7%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '66.4' },
+            { method: 'Binder', accuracy: '27.3' },
+            { method: 'BlendSQL', accuracy: '42.0' },
+            { method: 'ReAcTable', accuracy: '45.4' },
+            { method: 'H-STAR', accuracy: '61.0' },
+            { method: 'ProTrix', accuracy: '61.7' },
+            { method: 'Weaver (Ours)', accuracy: '70.7', isOurs: true }
+          ]
+        },
+        gemini: {
+          name: 'Gemini-2.0-Flash',
+          shortName: 'Gemini',
+          bestAccuracy: '69.6%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '67.5' },
+            { method: 'Binder', accuracy: '12.9' },
+            { method: 'BlendSQL', accuracy: '31.1' },
+            { method: 'ReAcTable', accuracy: '20.4' },
+            { method: 'H-STAR', accuracy: '63.5' },
+            { method: 'ProTrix', accuracy: '62.2' },
+            { method: 'Weaver (Ours)', accuracy: '69.6', isOurs: true }
+          ]
+        },
+        deepseek: {
+          name: 'DeepSeek-R1-Distill-Llama-70B',
+          shortName: 'DeepSeek',
+          bestAccuracy: '73.0%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '76.4' },
+            { method: 'Binder', accuracy: '26.4' },
+            { method: 'BlendSQL', accuracy: '32.2' },
+            { method: 'ReAcTable', accuracy: '52.2' },
+            { method: 'H-STAR', accuracy: '68.7' },
+            { method: 'ProTrix', accuracy: '41.4' },
+            { method: 'Weaver (Ours)', accuracy: '73.0', isOurs: true }
+          ]
+        }
+      }
     },
     tabfact: {
       name: 'TabFact',
+      fullName: 'TabFact',
       description: 'Fact verification over tables',
-      bestAccuracy: '91.2%',
-      model: 'DeepSeek-R1-Distill-Llama-70B',
-      results: [
-        { method: 'End-to-End QA', accuracy: '82.5', model: 'DeepSeek' },
-        { method: 'Binder', accuracy: '62.7', model: 'DeepSeek' },
-        { method: 'BlendSQL', accuracy: '50.8', model: 'DeepSeek' },
-        { method: 'ReAcTable', accuracy: '45.6', model: 'DeepSeek' },
-        { method: 'H-STAR', accuracy: '55.6', model: 'DeepSeek' },
-        { method: 'ProTrix', accuracy: '81.1', model: 'DeepSeek' },
-        { method: 'Weaver (Ours)', accuracy: '91.2', model: 'DeepSeek', isOurs: true }
-      ]
+      models: {
+        gpt4mini: {
+          name: 'GPT-4o-mini',
+          shortName: 'GPT-4o-mini',
+          bestAccuracy: '89.4%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '84.4' },
+            { method: 'Binder', accuracy: '62.0' },
+            { method: 'BlendSQL', accuracy: '68.5' },
+            { method: 'ReAcTable', accuracy: '37.4' },
+            { method: 'H-STAR', accuracy: '83.0' },
+            { method: 'ProTrix', accuracy: '81.5' },
+            { method: 'Weaver (Ours)', accuracy: '89.4', isOurs: true }
+          ]
+        },
+        gpt4: {
+          name: 'GPT-4o',
+          shortName: 'GPT-4o',
+          bestAccuracy: '83.4%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '80.8' },
+            { method: 'Binder', accuracy: '60.3' },
+            { method: 'BlendSQL', accuracy: '68.3' },
+            { method: 'ReAcTable', accuracy: '45.4' },
+            { method: 'H-STAR', accuracy: '87.0' },
+            { method: 'ProTrix', accuracy: '80.5' },
+            { method: 'Weaver (Ours)', accuracy: '83.4', isOurs: true }
+          ]
+        },
+        gemini: {
+          name: 'Gemini-2.0-Flash',
+          shortName: 'Gemini',
+          bestAccuracy: '85.4%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '81.8' },
+            { method: 'Binder', accuracy: '60.4' },
+            { method: 'BlendSQL', accuracy: '60.1' },
+            { method: 'ReAcTable', accuracy: '37.6' },
+            { method: 'H-STAR', accuracy: '86.1' },
+            { method: 'ProTrix', accuracy: '80.8' },
+            { method: 'Weaver (Ours)', accuracy: '85.4', isOurs: true }
+          ]
+        },
+        deepseek: {
+          name: 'DeepSeek-R1-Distill-Llama-70B',
+          shortName: 'DeepSeek',
+          bestAccuracy: '91.2%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '82.5' },
+            { method: 'Binder', accuracy: '62.7' },
+            { method: 'BlendSQL', accuracy: '50.8' },
+            { method: 'ReAcTable', accuracy: '45.6' },
+            { method: 'H-STAR', accuracy: '55.6' },
+            { method: 'ProTrix', accuracy: '81.1' },
+            { method: 'Weaver (Ours)', accuracy: '91.2', isOurs: true }
+          ]
+        }
+      }
     },
     finqa: {
       name: 'FinQA',
+      fullName: 'FinQA',
       description: 'Financial reasoning with numerical tables',
-      bestAccuracy: '65.0%',
-      model: 'DeepSeek-R1-Distill-Llama-70B',
-      results: [
-        { method: 'End-to-End QA', accuracy: '52.4', model: 'DeepSeek' },
-        { method: 'Binder', accuracy: '24.4', model: 'DeepSeek' },
-        { method: 'BlendSQL', accuracy: '36.7', model: 'DeepSeek' },
-        { method: 'H-STAR', accuracy: '50.3', model: 'DeepSeek' },
-        { method: 'ProTrix', accuracy: '60.4', model: 'DeepSeek' },
-        { method: 'Weaver (Ours)', accuracy: '65.0', model: 'DeepSeek', isOurs: true }
-      ]
+      models: {
+        gpt4mini: {
+          name: 'GPT-4o-mini',
+          shortName: 'GPT-4o-mini',
+          bestAccuracy: '49.3%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '44.7' },
+            { method: 'Binder', accuracy: '13.0' },
+            { method: 'BlendSQL', accuracy: '37.0' },
+            { method: 'H-STAR', accuracy: '40.1' },
+            { method: 'ProTrix', accuracy: '46.4' },
+            { method: 'Weaver (Ours)', accuracy: '49.3', isOurs: true }
+          ]
+        },
+        gpt4: {
+          name: 'GPT-4o',
+          shortName: 'GPT-4o',
+          bestAccuracy: '60.8%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '58.3' },
+            { method: 'Binder', accuracy: '17.0' },
+            { method: 'BlendSQL', accuracy: '34.3' },
+            { method: 'H-STAR', accuracy: '46.0' },
+            { method: 'ProTrix', accuracy: '54.3' },
+            { method: 'Weaver (Ours)', accuracy: '60.8', isOurs: true }
+          ]
+        },
+        gemini: {
+          name: 'Gemini-2.0-Flash',
+          shortName: 'Gemini',
+          bestAccuracy: '44.5%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '29.4' },
+            { method: 'Binder', accuracy: '21.3' },
+            { method: 'BlendSQL', accuracy: '19.7' },
+            { method: 'H-STAR', accuracy: '38.7' },
+            { method: 'ProTrix', accuracy: '42.9' },
+            { method: 'Weaver (Ours)', accuracy: '44.5', isOurs: true }
+          ]
+        },
+        deepseek: {
+          name: 'DeepSeek-R1-Distill-Llama-70B',
+          shortName: 'DeepSeek',
+          bestAccuracy: '65.0%',
+          results: [
+            { method: 'End-to-End QA', accuracy: '52.4' },
+            { method: 'Binder', accuracy: '24.4' },
+            { method: 'BlendSQL', accuracy: '36.7' },
+            { method: 'H-STAR', accuracy: '50.3' },
+            { method: 'ProTrix', accuracy: '60.4' },
+            { method: 'Weaver (Ours)', accuracy: '65.0', isOurs: true }
+          ]
+        }
+      }
     }
   };
 
   const datasets = Object.keys(resultsData);
   const currentData = resultsData[activeDataset];
+  const availableModels = currentData ? Object.keys(currentData.models) : [];
+  const currentModelData = currentData?.models?.[activeModel];
 
   return (
     <section id="results" className="results-section section-padding">
@@ -167,63 +311,89 @@ const Results = () => {
                   <button
                     key={dataset}
                     className={`dataset-tab ${activeDataset === dataset ? 'active' : ''}`}
-                    onClick={() => setActiveDataset(dataset)}
+                    onClick={() => {
+                      setActiveDataset(dataset);
+                      // Reset to first available model when switching datasets
+                      const firstModel = Object.keys(resultsData[dataset].models)[0];
+                      setActiveModel(firstModel);
+                    }}
                   >
-                    {resultsData[dataset].name}
+                    {resultsData[dataset].name}<sub>hybrid</sub>
                   </button>
                 ))}
               </div>
             </div>
 
+            {currentModelData && (
+              <div className="model-selector">
+                <h4>Select Model</h4>
+                <div className="model-tabs">
+                  {availableModels.map((modelKey) => (
+                    <button
+                      key={modelKey}
+                      className={`model-tab ${activeModel === modelKey ? 'active' : ''}`}
+                      onClick={() => setActiveModel(modelKey)}
+                    >
+                      {currentData.models[modelKey].shortName}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="results-visualization">
               <div className="dataset-info">
-                <h4>{currentData.name}</h4>
-                <p>{currentData.description}</p>
-                <div className="best-result">
-                  <FiAward className="award-icon" />
-                  <span>Best: {currentData.bestAccuracy} ({currentData.model})</span>
-                </div>
+                <h4>{currentData?.name}<sub>hybrid</sub></h4>
+                <p>{currentData?.description}</p>
+                {currentModelData && (
+                  <div className="best-result">
+                    <FiAward className="award-icon" />
+                    <span>Best: {currentModelData.bestAccuracy} ({currentModelData.name})</span>
+                  </div>
+                )}
               </div>
 
-              <div className="results-chart">
-                <div className="chart-header">
-                  <h5>Accuracy Comparison (%)</h5>
-                  <span className="chart-subtitle">Higher is better</span>
+              {currentModelData && (
+                <div className="results-chart">
+                  <div className="chart-header">
+                    <h5>Accuracy Comparison (%)</h5>
+                    <span className="chart-subtitle">Higher is better • {currentModelData.name}</span>
+                  </div>
+                  <div className="chart-bars">
+                    {currentModelData.results
+                      .sort((a, b) => parseFloat(b.accuracy) - parseFloat(a.accuracy))
+                      .map((result, index) => {
+                        const maxAccuracy = Math.max(...currentModelData.results.map(r => parseFloat(r.accuracy)));
+                        const width = maxAccuracy > 0 ? (parseFloat(result.accuracy) / maxAccuracy) * 100 : 0;
+                        
+                        return (
+                          <motion.div
+                            key={`${result.method}-${index}`}
+                            className={`chart-bar ${result.isOurs ? 'our-method' : ''}`}
+                            initial={{ width: 0 }}
+                            animate={{ width: '100%' }}
+                            transition={{ duration: 0.8, delay: index * 0.1 }}
+                          >
+                            <div className="bar-info">
+                              <span className="method-name">{result.method}</span>
+                              <span className="method-model">{currentModelData.shortName}</span>
+                            </div>
+                            <div className="bar-container">
+                              <motion.div
+                                className="bar-fill"
+                                style={{ width: `${width}%` }}
+                                initial={{ width: 0 }}
+                                animate={{ width: `${width}%` }}
+                                transition={{ duration: 1, delay: index * 0.1 }}
+                              />
+                              <span className="bar-value">{result.accuracy}%</span>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                  </div>
                 </div>
-                <div className="chart-bars">
-                  {currentData.results
-                    .sort((a, b) => parseFloat(b.accuracy) - parseFloat(a.accuracy))
-                    .map((result, index) => {
-                      const maxAccuracy = Math.max(...currentData.results.map(r => parseFloat(r.accuracy)));
-                      const width = (parseFloat(result.accuracy) / maxAccuracy) * 100;
-                      
-                      return (
-                        <motion.div
-                          key={result.method}
-                          className={`chart-bar ${result.isOurs ? 'our-method' : ''}`}
-                          initial={{ width: 0 }}
-                          animate={{ width: '100%' }}
-                          transition={{ duration: 0.8, delay: index * 0.1 }}
-                        >
-                          <div className="bar-info">
-                            <span className="method-name">{result.method}</span>
-                            <span className="method-model">{result.model}</span>
-                          </div>
-                          <div className="bar-container">
-                            <motion.div
-                              className="bar-fill"
-                              style={{ width: `${width}%` }}
-                              initial={{ width: 0 }}
-                              animate={{ width: `${width}%` }}
-                              transition={{ duration: 1, delay: index * 0.1 }}
-                            />
-                            <span className="bar-value">{result.accuracy}%</span>
-                          </div>
-                        </motion.div>
-                      );
-                    })}
-                </div>
-              </div>
+              )}
             </div>
           </motion.div>
 

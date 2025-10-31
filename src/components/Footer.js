@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiGithub, FiFileText, FiMail, FiExternalLink, FiHeart } from 'react-icons/fi';
+import { FiGithub, FiFileText, FiMail, FiExternalLink, FiHeart, FiImage } from 'react-icons/fi';
 import './Footer.css';
 
 const Footer = () => {
@@ -50,6 +50,16 @@ const Footer = () => {
                   <FiExternalLink className="external-icon" />
                 </a>
                 <a
+                  href={`${process.env.PUBLIC_URL || ''}/poster.pdf`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-btn secondary"
+                >
+                  <FiImage />
+                  Poster
+                  <FiExternalLink className="external-icon" />
+                </a>
+                <a
                   href="https://github.com/rohitkhoja/weaver"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -69,12 +79,12 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      target={link.external ? "_blank" : "_self"}
-                      rel={link.external ? "noopener noreferrer" : ""}
+                      target={link.external || link.href.startsWith('/') ? "_blank" : "_self"}
+                      rel={link.external || link.href.startsWith('/') ? "noopener noreferrer" : ""}
                       className="footer-link"
                     >
                       {link.label}
-                      {link.external && <FiExternalLink className="link-icon" />}
+                      {(link.external || link.href.startsWith('/')) && <FiExternalLink className="link-icon" />}
                     </a>
                   </li>
                 ))}
